@@ -17,7 +17,7 @@ body {
   font-weight: bold;
 }
 
-#navBar {
+.navBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,7 +27,7 @@ body {
   margin-bottom: 2%;
   padding: auto;
 }
-#searchDiv {
+.navBar-searchDiv {
   background-color: white;
   height: 20px;
   width: 25%;
@@ -35,15 +35,20 @@ body {
   display: inline-block;
   border-radius: 5px;
 }
-#searchInput {
+#searchDiv-Input {
   border: none;
   background-color: transparent;
   resize: none;
   outline: none;
-  margin-left: 3%;
+  margin-left: 10%;
 }
 
-.dropbtn {
+.navBar-Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-Button {
   background-color: white;
   color: #858585;
   padding: 15px;
@@ -51,12 +56,7 @@ body {
   border-radius: 5px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
+.dropdown-Content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -66,7 +66,7 @@ body {
   border-radius: 5px;
 }
 
-.dropdown-content a {
+.dropdown-Content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -74,15 +74,15 @@ body {
   border-radius: 5px;
 }
 
-.dropdown-content a:hover {
+.dropdown-Content a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.navBar-Dropdown:hover .dropdown-Content {
   display: block;
 }
 
-#main {
+.main {
   display: flex;
   /* background-color: yellow; */
   width: 90%;
@@ -90,14 +90,14 @@ body {
   justify-content: space-between;
   margin: auto;
 }
-.card {
+.main-Card {
   width: 21%;
   height: 400px;
   background-color: white;
   margin-bottom: 5%;
   border-radius: 5px;
 }
-.card:hover {
+.main-Card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -107,28 +107,31 @@ img {
   object-fit: cover;
   border-radius: 5px;
 }
-.homeParagraph{
+.homeParagraph {
   margin: 0;
   font-size: 14px;
 }
-.detailParagraph{
-    margin: 0;
-    font-size: 16px;
+.detailParagraph {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 5%;
 }
-.info {
+.main-Info {
   margin: 10%;
 }
 
-.flagDiv {
+.mainDiv {
   margin: auto;
   display: flex;
   flex-direction: row;
   width: 90%;
+  height: 400px;
 }
-.flag {
+.mainDiv-Flag {
   width: 50%;
+  height: 100%;
 }
-.details {
+.mainDiv-Details {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -136,7 +139,7 @@ img {
 h2 {
   margin-left: 12.5%;
 }
-.countrySpecs {
+.details-CountrySpecs {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -162,7 +165,7 @@ h2 {
 .countryButton:hover {
   background-color: #a82929;
 }
-.backArrow {
+.backArrow-Button {
   background-color: white;
   color: #858585;
   border: 1px solid #858585;
@@ -170,9 +173,84 @@ h2 {
   font-weight: bold;
   width: 7%;
   height: 30px;
+  margin: 2.5% 0% 2.5% 5%;
 }
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: green;
-    }
+.borderCountries-Text {
+  width: 20%;
+}
+.borderCountries-List {
+  width: 80%;
+}
+@media all and (min-width: 375px) and (max-width: 1440px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
+  .main-Card {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navBar-searchDiv {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  .dropdown-Button {
+    margin-bottom: 5%;
+  }
+  .mainDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .mainDiv-Flag {
+    margin: auto;
+    width: 90%;
+  }
+  .mainDiv-Details {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+  }
+  .backArrow-Button {
+    width: 20%;
+    margin: 5%;
+  }
+  h2 {
+    margin: 0%;
+    margin-top: 5%;
+  }
+  .details-CountrySpecs {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .borderCountries {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+  }
+  .borderCountries-Text {
+    width: 50%;
+    margin-bottom: 5%;
+  }
+  .countryButton {
+    width: 30%;
+    margin: 0;
+  }
+  .detailParagraph-SecondSet {
+    margin-top: 5%;
+  }
+  .detailParagraph {
+    margin-bottom: 2.5%;
+  }
+}
