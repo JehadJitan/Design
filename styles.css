@@ -84,7 +84,6 @@ body {
 
 .main {
   display: flex;
-  /* background-color: yellow; */
   width: 90%;
   flex-wrap: wrap;
   justify-content: space-between;
